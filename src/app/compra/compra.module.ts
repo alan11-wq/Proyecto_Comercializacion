@@ -5,7 +5,11 @@ import { DatosenvioComponent } from './datosenvio/datosenvio.component';
 import { DatospagoComponent } from './datospago/datospago.component';
 import { ConfirmacioncompraComponent } from './confirmacioncompra/confirmacioncompra.component';
 
+import {NavegacionModule} from "../navegacion/navegacion.module";
 
+import {RouterModule} from "@angular/router";
+import {RoutingRoutingModule} from "../routing/routing-routing.module";
+import {ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -15,7 +19,11 @@ import { ConfirmacioncompraComponent } from './confirmacioncompra/confirmacionco
     ConfirmacioncompraComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    NavegacionModule,
+    RouterModule,
+    RoutingRoutingModule,
+    ReactiveFormsModule
   ]
 })
 export class CompraModule { }

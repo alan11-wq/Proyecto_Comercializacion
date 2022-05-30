@@ -1,1 +1,72 @@
-<p>datospago works!</p>
+<link href="datospago.component.css" rel="stylesheet">
+<body class="bg-light">
+
+<div class="container">
+  <main>
+    <div class="py-5 text-center">
+      <img class="d-block mx-auto mb-4" src="/assets/logo.jpg" alt="" width="72" height="57">
+      <p class="lead">INFORMACIÓN DE PAGO</p>
+    </div>
+<form   [formGroup]="formPago" (submit)="SavePago()">
+  <hr class="my-4">
+
+    <div class="my-3">
+      <div class="form-check">
+        <input id="credit" name="paymentMethod" type="radio" class="form-check-input" checked required>
+        <label class="form-check-label" for="credit">Tarjeta de crédito</label>
+      </div>
+      <div class="form-check">
+        <input id="debit" name="paymentMethod" type="radio" class="form-check-input" required>
+        <label class="form-check-label" for="debit">Tarjeta de débito</label>
+      </div>
+      <div class="form-check">
+        <input id="paypal" name="paymentMethod" type="radio" class="form-check-input" required>
+        <label class="form-check-label" for="paypal">PayPal</label>
+      </div>
+    </div>
+
+    <div class="row gy-3">
+      <div class="col-md-6">
+        <label for="name" class="form-label">Nombre del titular</label>
+        <input type="text" class="form-control" id="name" placeholder="" required>
+        <small class="text-muted">Introduce el nombre completo</small>
+        <div class="invalid-feedback d-block">
+          Nombre del titular obligatorio.
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <label for="number" class="form-label">Número de la tarjeta</label>
+        <input type="text" class="form-control" id="number" placeholder="" required>
+        <div class="invalid-feedback d-block">
+         El número de la tarjeta es obligatorio.
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <label for="expiration" class="form-label">Fecha de vencimiento</label>
+        <input type="text" class="form-control" id="expiration" placeholder="" required>
+        <div class="invalid-feedback d-block">
+          Fecha de vencimiento obligatoria.
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <label for="cvv" class="form-label">CVV</label>
+        <input type="text" class="form-control" id="cvv" placeholder="" required>
+        <div class="invalid-feedback d-block">
+         Código de seguridad obligatorio.
+        </div>
+      </div>
+    </div>
+
+    <hr class="my-4">
+
+    <button [disabled]="formPago.invalid" class=" btn btn-primary active w-100 btn btn-primary btn-lg"  aria-current="page"><a [routerLink]="'compra/confirmacion'"></a>Confirmar compra</button>
+    </form>
+  </main>
+</div>
+<app-footer></app-footer>
+</body>
+
+

@@ -13,7 +13,8 @@ import {CompraModule} from "./compra/compra.module";
 
 import {RoutingRoutingModule} from "./routing/routing-routing.module";
 import {CategoriasRoutingModule} from "./categorias/categorias-routing.module";
-
+import {ComprasRoutingModule} from "./compra/compra-routing.module";
+import {ProductosRoutingModule} from "./productos/productos-routing.module";
 
 
 @NgModule({
@@ -29,6 +30,9 @@ import {CategoriasRoutingModule} from "./categorias/categorias-routing.module";
     RouterModule,
     RoutingRoutingModule,
     CategoriasRoutingModule,
+    ComprasRoutingModule,
+      ProductosRoutingModule,
+
 
     CategoriasModule,
     NavegacionModule,

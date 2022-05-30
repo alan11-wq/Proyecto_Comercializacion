@@ -7,7 +7,9 @@ import {PrincipalComponent} from "../navegacion/principal/principal.component";
 const routes: Routes = [
   {path:'home', component:HomeComponent},
   {path:'principal', component: PrincipalComponent},
-  {path:'productos', loadChildren:()=>import('./routing.module').then(module=>module.RoutingModule)}
+  {path:'productos', loadChildren:()=>import('./routing.module').then(module=>module.RoutingModule)},
+  {path:'compras', loadChildren:()=>import('./routing.module').then(module=>module.RoutingModule)},
+  {path:'audioyvideos', loadChildren:()=>import('./routing.module').then(module=>module.RoutingModule)}
 
 
 ];

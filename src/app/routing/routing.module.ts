@@ -6,6 +6,7 @@ import {RouterModule} from "@angular/router";
 
 import {CategoriasModule} from "../categorias/categorias.module";
 import {NavegacionModule} from "../navegacion/navegacion.module";
+import {ProductosModule} from "../productos/productos.module";
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import {NavegacionModule} from "../navegacion/navegacion.module";
     RoutingRoutingModule,
     RouterModule,
     CategoriasModule,
-    NavegacionModule
+    NavegacionModule,
+    ProductosModule
   ]
 })
 export class RoutingModule { }

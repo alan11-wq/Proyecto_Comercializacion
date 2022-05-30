@@ -1,1 +1,178 @@
-<p>datosenvio works!</p>
+
+<link href="datosenvio.component.css" rel="stylesheet">
+
+<body class="bg-light">
+
+<div class="container">
+  <main>
+    <div class="py-5 text-center">
+      <img class="d-block mx-auto mb-4" src="/assets/logo.jpg" alt="" width="72" height="57">
+      <p class="lead">INFORMACIÓN DE ENVÍO</p>
+    </div>
+
+    <div class="row g-5">
+      <div class="col-md-5 col-lg-4 order-md-last">
+        <h4 class="d-flex justify-content-between align-items-center mb-3">
+          <span class="text-primary">Carrito de compra</span>
+          <span class="badge bg-primary rounded-pill">3</span>
+        </h4>
+        <ul class="list-group mb-3">
+          <li class="list-group-item d-flex justify-content-between lh-sm">
+            <div>
+              <h6 class="my-0">Nombre del producto</h6>
+              <small class="text-muted">Breve descripción</small>
+            </div>
+            <span class="text-muted">$1,999.00</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between lh-sm">
+            <div>
+              <h6 class="my-0">Segundo producto</h6>
+              <small class="text-muted">Breve descripción</small>
+            </div>
+            <span class="text-muted">$799.00</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between lh-sm">
+            <div>
+              <h6 class="my-0">Tercer producto</h6>
+              <small class="text-muted">Breve descripción</small>
+            </div>
+            <span class="text-muted">$499.00</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between bg-light">
+            <div class="text-success">
+              <h6 class="my-0">Cupón de descuento</h6>
+              <small></small>
+            </div>
+            <span class="text-success">−10%</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between">
+            <span>Total (MXN)</span>
+            <strong>$1987.00</strong>
+          </li>
+        </ul>
+
+        <form [formGroup]="formEnvio" (submit)="SaveEnvio()" class="card p-2">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Promo code">
+            <button type="submit" class="btn btn-secondary">APLICAR</button>
+          </div>
+        </form>
+      </div>
+      <div class="col-md-7 col-lg-8">
+
+        <h4 class="mb-3">DATOS DE ENVÍO</h4>
+        <form class="needs-validation" novalidate>
+          <div class="row g-3">
+            <div class="col-sm-6">
+              <label for="firstName" class="form-label">Nombre(s)</label>
+              <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+              <div class="invalid-feedback d-block">
+                Campo obligatorio.
+              </div>
+            </div>
+
+            <div class="col-sm-6">
+              <label for="lastName" class="form-label">Apellidos</label>
+              <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
+              <div class="invalid-feedback d.block" >
+                Campo obligatorio.
+              </div>
+            </div>
+
+            <div class="col-12">
+              <label for="username" class="form-label">Nombre de usuario</label>
+              <div class="input-group has-validation">
+                <span class="input-group-text">@</span>
+                <input type="text" class="form-control" id="username" placeholder="Username" required>
+                <div class="invalid-feedback d-block">
+                  Campo obligatorio
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12">
+              <label for="email" class="form-label">Correo electrónico <span class="text-muted">(Opcional)</span></label>
+              <input type="email" class="form-control" id="email" placeholder="you@example.com">
+              <div class="invalid-feedback d-block">
+                Por favor introduce un correo válido.
+              </div>
+            </div>
+
+            <div class="col-12">
+              <label for="address" class="form-label">Dirección</label>
+              <input type="text" class="form-control" id="address" placeholder="" required>
+              <div class="invalid-feedback d-block">
+                Por favor ingresa tu calle y número.
+              </div>
+            </div>
+
+            <div class="col-12">
+              <label for="colonia" class="form-label">Colonia</label>
+              <input type="text" class="form-control" id="colonia" placeholder="" required>
+              <div class="invalid-feedback d-block">
+                Por favor ingresa tu colonia de envío.
+              </div>
+            </div>
+
+            <div class="col-12">
+              <label for="municipio" class="form-label">Municipio</label>
+              <input type="text" class="form-control" id="municipio" placeholder="" required>
+              <div class="invalid-feedback d-block">
+                Por favor ingresa tu municipio de envío.
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <label for="state" class="form-label">Estado</label>
+              <select class="form-select" id="state" required>
+                <option value="">Elegir</option>
+                <option>Estado de México</option>
+                <option>Ciudad de México</option>
+              </select>
+              <div class="invalid-feedback d-block">
+                Por favor selecciona un estado.
+              </div>
+            </div>
+
+            <div class="col-md-5">
+              <label for="pais" class="form-label">País</label>
+              <select class="form-select" id="pais" required>
+                <option value="">Elegir</option>
+                <option>México</option>
+                <option>Estados Unidos</option>
+                <option>Canadá</option>
+              </select>
+              <div class="invalid-feedback d-block">
+                Por favor selecciona un país.
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <label for="cp" class="form-label">Código Postal</label>
+              <input type="text" class="form-control" id="cp" placeholder="" required>
+              <div class="invalid-feedback d-block">
+                Código postal obligatorio.
+              </div>
+            </div>
+          </div>
+
+          <hr class="my-4">
+
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="same-address">
+            <label class="form-check-label" for="same-address">La dirección de envío es la misma que la dirección de facturación</label>
+          </div>
+
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="save-info">
+            <label class="form-check-label" for="save-info">Guardar esta información para la próxima vez.</label>
+          </div>
+          <button  [disabled]="formEnvio.invalid" class="btn btn-primary active w-100 btn btn-primary btn-lg" aria-current="page"><a [routerLink]="'compra/pago'"></a>Continuar con el proceso de pago</button>
+        </form>
+      </div>
+    </div>
+  </main>
+</div>
+
+<app-footer></app-footer>
+</body>

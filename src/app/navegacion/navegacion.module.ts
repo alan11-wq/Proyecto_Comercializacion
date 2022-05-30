@@ -8,21 +8,29 @@ import {RouterModule} from "@angular/router";
 import {RoutingRoutingModule} from "../routing/routing-routing.module";
 import { PrincipalComponent } from './principal/principal.component';
 
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
+
 
 @NgModule({
     declarations: [
         NavbarComponent,
         HomeComponent,
-        PrincipalComponent
+        PrincipalComponent,
+        HeaderComponent,
+        FooterComponent
     ],
   exports: [
     HomeComponent,
-    NavbarComponent
+    NavbarComponent,
+    HeaderComponent,
+    FooterComponent,
+    PrincipalComponent
   ],
     imports: [
         CommonModule,
       RouterModule,
-      RoutingRoutingModule,
+      RoutingRoutingModule
 
     ]
 })

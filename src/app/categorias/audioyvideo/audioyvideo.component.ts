@@ -19,4 +19,8 @@ export class AudioyvideoComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  MostrarProductoAudioyVideo1()
+  {
+    this.route.navigate(['producto/audioyvideo1'])
+  }
 }
