@@ -1,0 +1,92 @@
+<link href="altatienda.component.css" rel="stylesheet">
+
+<body class="bg-light">
+
+<div class="container">
+  <main>
+    <div class="py-5 text-center">
+      <img class="d-block mx-auto mb-4" src="/assets/logo.jpg" alt="" width="72" height="57">
+      <p class="lead">REGISTRO DE NUEVA SUCURSAL</p>
+    </div>
+
+    <div class="col-md-7 col-lg-8">
+
+      <h4 class="mb-3">NUEVO TIENDA</h4>
+      <form [formGroup]="formAltaTienda" (submit)="SaveTienda()" )class="needs-validation">
+        <div class="row g-3">
+          <div class="col-sm-6">
+
+
+            <div class="col-12">
+              <label for="nombre" class="form-label">Nombre de la sucursal <span class="text-muted">(Código de sucursal)</span></label>
+              <input type="nombre" class="form-control" id="nombre" formControlName="nombre">
+              <div class="invalid-feedback">
+                Por favor introduce el nombre de la sucursal
+              </div>
+            </div>
+            <div class="col-12">
+              <label for="address" class="form-label">Dirección</label>
+              <input type="text" class="form-control" id="address" formControlName="address">
+              <div class="invalid-feedback">
+                Por favor ingresa la calle y número.
+              </div>
+            </div>
+
+            <div class="col-12">
+              <label for="colonia" class="form-label">Colonia</label>
+              <input type="text" class="form-control" id="colonia" formControlName="colonia">
+              <div class="invalid-feedback">
+                Por favor ingresa la colonia.
+              </div>
+            </div>
+
+            <div class="col-12">
+              <label for="municipio" class="form-label">Municipio</label>
+              <input type="text" class="form-control" id="municipio" formControlName="municipio">
+              <div class="invalid-feedback">
+                Por favor ingresa el municipio.
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <label for="state" class="form-label">Estado</label>
+              <select class="form-select" id="state" formControlName="state">
+                <option value="">Elegir</option>
+                <option>Estado de México</option>
+                <option>Ciudad de México</option>
+              </select>
+              <div class="invalid-feedback">
+                Por favor selecciona un estado.
+              </div>
+            </div>
+
+            <div class="col-md-5">
+              <label for="pais" class="form-label">País</label>
+              <select class="form-select" id="pais" formControlName="pais">
+                <option value="">Elegir</option>
+                <option>México</option>
+                <option>Estados Unidos</option>
+                <option>Canadá</option>
+              </select>
+              <div class="invalid-feedback">
+                Por favor selecciona un país.
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <label for="cp" class="form-label">Código Postal</label>
+              <input type="text" class="form-control" id="cp" formControlName="cp">
+              <div class="invalid-feedback">
+                Código postal obligatorio.
+              </div>
+            </div>
+          </div>
+
+          <button  [disabled]="formAltaTienda.invalid" class="btn btn-primary active w-100 btn btn-primary btn-lg" aria-current="page">Guardar nueva tienda</button>
+        </div>
+      </form>
+    </div>
+    <app-footer></app-footer>
+  </main>
+</div>
+</body>

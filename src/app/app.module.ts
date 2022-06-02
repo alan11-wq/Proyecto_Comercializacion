@@ -9,19 +9,20 @@ import {RouterModule} from '@angular/router';
 import {CategoriasModule} from "./categorias/categorias.module";
 import {NavegacionModule} from "./navegacion/navegacion.module";
 import {CompraModule} from "./compra/compra.module";
+import {ProductosModule} from "./productos/productos.module";
+import {AltasModule} from "./altas/altas.module";
 
 
 import {RoutingRoutingModule} from "./routing/routing-routing.module";
 import {CategoriasRoutingModule} from "./categorias/categorias-routing.module";
 import {ComprasRoutingModule} from "./compra/compra-routing.module";
 import {ProductosRoutingModule} from "./productos/productos-routing.module";
+import {AltasRoutingModule} from "./altas/altas-routing.module";
 
 
 @NgModule({
   declarations: [
     AppComponent
-
-
 
   ],
   imports: [
@@ -31,7 +32,10 @@ import {ProductosRoutingModule} from "./productos/productos-routing.module";
     RoutingRoutingModule,
     CategoriasRoutingModule,
     ComprasRoutingModule,
-      ProductosRoutingModule,
+    ProductosModule,
+    ProductosRoutingModule,
+    AltasModule,
+    AltasRoutingModule,
 
 
     CategoriasModule,

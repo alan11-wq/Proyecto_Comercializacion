@@ -1,0 +1,158 @@
+
+<link href="altausuario.component.css" rel="stylesheet">
+
+<body class="bg-light">
+
+<div class="container">
+  <main>
+    <div class="py-5 text-center">
+      <img class="d-block mx-auto mb-4" src="/assets/logo.jpg" alt="" width="72" height="57">
+      <p class="lead">REGISTRO DE NUEVO USUARIO</p>
+    </div>
+
+      <div class="col-md-7 col-lg-8">
+
+        <h4 class="mb-3">NUEVO USUARIO</h4>
+        <form [formGroup]="formAltaUsuario" (submit)="SaveUsuario()" class="needs-validation">
+          <div class="row g-3">
+            <div class="col-sm-6">
+
+              <hr class="my-4">
+
+              <div class="my-3">
+                <div class="form-check">
+                  <input id="administrador" name="usertype" type="radio" class="form-check-input" checked required formControlName="administrador">
+                  <label class="form-check-label" for="administrador">Administrador</label>
+                </div>
+                <div class="form-check">
+                  <input id="cliente" name="usertype" type="radio" class="form-check-input" required formControlName="cliente">
+                  <label class="form-check-label" for="cliente">Cliente</label>
+                </div>
+                <div class="form-check">
+                  <input id="visitante" name="usertype" type="radio" class="form-check-input" required formControlName="visitante">
+                  <label class="form-check-label" for="visitante">Visitante</label>
+                </div>
+              </div>
+
+              <div class="col-sm-6">
+              <label for="nombre" class="form-label">Nombre(s)</label>
+              <input type="text" class="form-control" id="nombre" formControlName="nombre">
+              <div class="invalid-feedback">
+                Campo obligatorio.
+              </div>
+            </div>
+
+            <div class="col-sm-6">
+              <label for="apellidop" class="form-label">Apellido Materno</label>
+              <input type="text" class="form-control" id="apellidop" formControlName="apellidop">
+              <div class="invalid-feedback">
+                Campo obligatorio.
+              </div>
+            </div>
+
+            <div class="col-sm-6">
+              <label for="apellidom" class="form-label">Apellido Paterno</label>
+              <input type="text" class="form-control" id="apellidom" formControlName="apellidom">
+              <div class="invalid-feedback">
+                Campo obligatorio.
+              </div>
+            </div>
+
+            <div class="col-12">
+              <label for="fecha" class="form-label">Fecha de nacimiento</label>
+              <div class="input-group has-validation">
+                <input type="text" class="form-control" id="fecha" formControlName="fecha">
+                <div class="invalid-feedback">
+                  Campo obligatorio
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12">
+              <label for="email" class="form-label">Correo electrónico <span class="text-muted">(Opcional)</span></label>
+              <input type="email" class="form-control" id="email" formControlName="email">
+              <div class="invalid-feedback">
+                Por favor introduce un correo válido.
+              </div>
+            </div>
+
+            <div class="col-12">
+              <label for="telefono" class="form-label">Número Telefónico <span class="text-muted">(Opcional)</span></label>
+              <input type="email" class="form-control" id="telefono" formControlName="telefono">
+              <div class="invalid-feedback">
+                Por favor introduce un correo válido.
+              </div>
+            </div>
+            <div class="col-12">
+              <label for="address" class="form-label">Dirección</label>
+              <input type="text" class="form-control" id="address" formControlName="address">
+              <div class="invalid-feedback">
+                Por favor ingresa tu calle y número.
+              </div>
+            </div>
+
+            <div class="col-12">
+              <label for="colonia" class="form-label">Colonia</label>
+              <input type="text" class="form-control" id="colonia" formControlName="colonia">
+              <div class="invalid-feedback">
+                Por favor ingresa tu colonia de envío.
+              </div>
+            </div>
+
+            <div class="col-12">
+              <label for="municipio" class="form-label">Municipio</label>
+              <input type="text" class="form-control" id="municipio" formControlName="municipio">
+              <div class="invalid-feedback">
+                Por favor ingresa tu municipio de envío.
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <label for="state" class="form-label">Estado</label>
+              <select class="form-select" id="state" formControlName="state">
+                <option value="">Elegir</option>
+                <option>Estado de México</option>
+                <option>Ciudad de México</option>
+              </select>
+              <div class="invalid-feedback">
+                Por favor selecciona un estado.
+              </div>
+            </div>
+
+            <div class="col-md-5">
+              <label for="pais" class="form-label">País</label>
+              <select class="form-select" id="pais" formControlName="pais">
+                <option value="">Elegir</option>
+                <option>México</option>
+                <option>Estados Unidos</option>
+                <option>Canadá</option>
+              </select>
+              <div class="invalid-feedback">
+                Por favor selecciona un país.
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <label for="cp" class="form-label">Código Postal</label>
+              <input type="text" class="form-control" id="cp" formControlName="cp">
+              <div class="invalid-feedback">
+                Código postal obligatorio.
+              </div>
+            </div>
+          </div>
+
+          <hr class="my-4">
+
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="save-info">
+            <label class="form-check-label" for="save-info">Guardar esta información para la próxima vez.</label>
+          </div>
+          <button  [disabled]="formAltaUsuario.invalid" class="btn btn-primary active w-100 btn btn-primary btn-lg" aria-current="page">Guardar datos del usuario</button>
+          </div>
+        </form>
+      </div>
+<app-footer></app-footer>
+  </main>
+</div>
+</body>
+

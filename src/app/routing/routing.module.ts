@@ -7,6 +7,7 @@ import {RouterModule} from "@angular/router";
 import {CategoriasModule} from "../categorias/categorias.module";
 import {NavegacionModule} from "../navegacion/navegacion.module";
 import {ProductosModule} from "../productos/productos.module";
+import {AltasModule} from "../altas/altas.module";
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import {ProductosModule} from "../productos/productos.module";
     RouterModule,
     CategoriasModule,
     NavegacionModule,
-    ProductosModule
+    ProductosModule,
+    AltasModule
   ]
 })
 export class RoutingModule { }

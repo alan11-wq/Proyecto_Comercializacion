@@ -9,8 +9,8 @@ const routes: Routes = [
   {path:'principal', component: PrincipalComponent},
   {path:'productos', loadChildren:()=>import('./routing.module').then(module=>module.RoutingModule)},
   {path:'compras', loadChildren:()=>import('./routing.module').then(module=>module.RoutingModule)},
-  {path:'audioyvideos', loadChildren:()=>import('./routing.module').then(module=>module.RoutingModule)}
-
+  {path:'audioyvideos', loadChildren:()=>import('./routing.module').then(module=>module.RoutingModule)},
+  {path:'registro', loadChildren:()=>import('./routing.module').then(module=>module.RoutingModule)}
 
 ];
 
