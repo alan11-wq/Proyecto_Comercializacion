@@ -1,0 +1,82 @@
+<body>
+<div class="container">
+  <main>
+      <div class="col-md-7 col-lg-8">
+        <h4 class="mb-3">Agregar Nueva Tienda</h4>
+        <form class="needs-validation" novalidate>
+          <div class="row g-3">
+            <div class="col-sm-6">
+              <label for="nombreTienda" class="form-label">Nombre de la Tienda</label>
+              <input type="text" class="form-control" id="nombreTienda" formControlName="nombreTienda">
+              <div class="invalid-feedback">
+                Campo obligatorio.
+              </div>
+            </div>
+            <div class="col-12">
+              <label for="address" class="form-label">Dirección</label>
+              <input type="text" class="form-control" id="address" formControlName="address">
+              <div class="invalid-feedback">
+                Por favor ingresa tu calle y número.
+              </div>
+            </div>
+            <div class="col-12">
+              <label for="codigoP" class="form-label">C.P</label>
+              <div class="input-group has-validation">
+                <span class="input-group-text">@</span>
+                <input type="text" class="form-control" id="codigoP" formControlName="codigoP">
+                <div class="invalid-feedback">
+                  Campo obligatorio
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12">
+              <label for="colonia" class="form-label">Colonia</label>
+              <input type="text" class="form-control" id="colonia" formControlName="colonia">
+              <div class="invalid-feedback">
+                Por favor ingresa tu calle y número.
+              </div>
+            </div>
+
+            <div class="col-12">
+              <label for="municipio" class="form-label">Municipio</label>
+              <input type="text" class="form-control" id="municipio" formControlName="municipio">
+              <div class="invalid-feedback">
+                Por favor ingresa tu municipio de envío.
+              </div>
+            </div>
+            <div class="col-md-4">
+              <label for="state" class="form-label">Estado</label>
+              <select class="form-select" id="state" formControlName="state">
+                <option value="">Elegir</option>
+                <option>Estado de México</option>
+                <option>Ciudad de México</option>
+              </select>
+              <div class="invalid-feedback">
+                Por favor selecciona un estado.
+              </div>
+            </div>
+            <div class="col-md-5">
+              <label for="pais" class="form-label">País</label>
+              <select class="form-select" id="pais" formControlName="pais">
+                <option value="">Elegir</option>
+                <option>México</option>
+                <option>Estados Unidos</option>
+                <option>Canadá</option>
+              </select>
+              <div class="invalid-feedback">
+                Por favor selecciona un país.
+              </div>
+            </div>
+            <hr class="my-4">
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="same-address">
+            <label class="form-check-label" for="same-address">La dirección de envío es la misma que la dirección de facturación</label>
+          </div>
+            <button   class="btn btn-primary active w-100 btn btn-primary btn-lg" aria-current="page"><a ></a>Agregar Tienda</button>
+          </div>
+        </form>
+    </div>
+  </main>
+</div>
+</body>
