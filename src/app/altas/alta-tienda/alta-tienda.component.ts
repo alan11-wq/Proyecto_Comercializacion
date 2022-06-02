@@ -1,0 +1,15 @@
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-alta-tienda',
+  templateUrl: './alta-tienda.component.html',
+  styleUrls: ['./alta-tienda.component.css']
+})
+export class AltaTiendaComponent implements OnInit {
+
+  constructor() { }
+
+  ngOnInit(): void {
+  }
+
+}
