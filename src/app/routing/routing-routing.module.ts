@@ -10,7 +10,8 @@ const routes: Routes = [
   {path:'productos', loadChildren:()=>import('./routing.module').then(module=>module.RoutingModule)},
   {path:'compras', loadChildren:()=>import('./routing.module').then(module=>module.RoutingModule)},
   {path:'audioyvideos', loadChildren:()=>import('./routing.module').then(module=>module.RoutingModule)},
-  {path:'registro', loadChildren:()=>import('./routing.module').then(module=>module.RoutingModule)}
+  {path:'registro', loadChildren:()=>import('./routing.module').then(module=>module.RoutingModule)},
+  {path:'altaCategoria',loadChildren:()=>import('./routing.module').then(module=>module.RoutingModule)}
 
 ];
 

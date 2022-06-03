@@ -1,7 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-<<<<<<< HEAD
-
 
 import {RoutingRoutingModule} from "../routing/routing-routing.module";
 import {RouterModule} from "@angular/router";
@@ -21,37 +19,14 @@ import {ReactiveFormsModule} from "@angular/forms";
     AltaproductoComponent,
     AltacategoriaComponent
   ],
-  exports: [
-
-  ],
-    imports: [
-        CommonModule,
-        RoutingRoutingModule,
-        RouterModule,
-        NavegacionModule,
-        AltasRoutingModule,
-        ReactiveFormsModule
-    ]
-=======
-import { RegistrarUsuarioComponent } from './registrar-usuario/registrar-usuario.component';
-import { AltaUsuarioComponent } from './alta-usuario/alta-usuario.component';
-import { AltaTiendaComponent } from './alta-tienda/alta-tienda.component';
-import { AltaCategoriaComponent } from './alta-categoria/alta-categoria.component';
-import { AltaProductoComponent } from './alta-producto/alta-producto.component';
-
-
-
-@NgModule({
-  declarations: [
-    RegistrarUsuarioComponent,
-    AltaUsuarioComponent,
-    AltaTiendaComponent,
-    AltaCategoriaComponent,
-    AltaProductoComponent
-  ],
+  exports: [],
   imports: [
-    CommonModule
+    CommonModule,
+    RoutingRoutingModule,
+    RouterModule,
+    NavegacionModule,
+    AltasRoutingModule,
+    ReactiveFormsModule
   ]
->>>>>>> aed90833bebb29a618d4fa947fec46214f61afc7
 })
 export class AltasModule { }
